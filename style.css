@@ -11,6 +11,7 @@
     margin-top:40px;
     margin-left:40px;
     border: 2px rgba(245,100,235,0.5) solid;
+    border-radius: 50px;
     overflow: hidden;
     
     position: relative;
@@ -20,19 +21,39 @@
     width: 50px;
     height: 100px;
     background-color:red;
-    
+    display: inline-block;
     position: absolute;
     bottom:0;
+    left: 50px;
   }
   .box{
-    width: 25px;
+   width: 25px;
     height: 25px;
     background-color:black;
-    
+    display: inline-block;
+
     position: absolute;
     bottom: 0;
     right: 0; 
     animation: 2s box infinite linear;
+  }
+
+  .score{
+    width: 200px;
+    height: 60px;
+
+    background-color:black;
+    color: white;
+    border-radius: 20px;
+    font-size: 3em;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   
@@ -50,5 +71,5 @@
   
   @keyframes box{
     0%{right:0px;}
-    100%{right:750px;}
+    100%{right:720px;}
   }

@@ -1,8 +1,12 @@
 let player = document.getElementById("player");
 let box = document.getElementById("box");
+let scoreEl = document.getElementById("score");
+let score = 0;
+
+
 
 function playerJump(){
-  console.log("Inside Player Jump")
+
   if(player.classList != "animate"){
      player.classList.add("animate");
   }
@@ -13,24 +17,43 @@ function playerJump(){
   
 }
 
-let isDead = setInterval(function(){
+  let isDead = setInterval(function(){
   let playerBottom = parseInt(window.getComputedStyle(player).getPropertyValue("bottom"));
   let boxRight = parseInt(window.getComputedStyle(box).getPropertyValue("right"));
   
-  if(playerBottom <= 25 && (boxRight >= 650 && boxRight <= 700)){
+  if(playerBottom <= 25 && (boxRight >= 600 && boxRight <= 650)){
+
+    clearInterval(scoreInterval);
     box.style.animation = "none";
     box.style.display = "none";
     alert("You Lose!");
-    
   }
 },10);
 
-//AUTOJUMP
-/*let autoJump = setInterval(function(){
-  console.log("Inside Auto Jump");
-  let boxRight = parseInt(window.getComputedStyle(box).getPropertyValue("right"));
 
-  if(boxRight >= 600){
-    playerJump();
-  } 
-},20);*/
+
+let scoreInterval = setInterval(updateScore,200);
+
+function updateScore(){
+  score++;
+  scoreEl.innerHTML = score;
+}
+
+// let updateScore = setInterval(function(){
+//   score += 1;
+//   scoreEl.innerHTML = score;
+// },200);
+
+
+
+
+
+//AUTOJUMP
+// let autoJump = setInterval(function(){
+//   console.log("Inside Auto Jump");
+//   let boxRight = parseInt(window.getComputedStyle(box).getPropertyValue("right"));
+
+//   if(boxRight >= 550){
+//     playerJump();
+//   } 
+// },20);
