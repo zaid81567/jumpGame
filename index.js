@@ -4,6 +4,15 @@ let scoreEl = document.getElementById("score");
 let score = 0;
 
 
+//keyPressChecker
+window.addEventListener("keydown",(e)=>{
+  if(e.code == 'Space'){
+    playerJump();
+  }
+  if(e.code == 'Enter'){
+    location.reload();
+  }
+})
 
 function playerJump(){
 
@@ -38,13 +47,6 @@ function updateScore(){
   score++;
   scoreEl.innerHTML = score;
 }
-
-// let updateScore = setInterval(function(){
-//   score += 1;
-//   scoreEl.innerHTML = score;
-// },200);
-
-
 
 
 
