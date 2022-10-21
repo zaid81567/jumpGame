@@ -1,75 +1,91 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-  }
-  
-  .container{
-    width: 700px;
-    height: 400px;
-    
-    margin-top:40px;
-    margin-left:40px;
-    border: 2px rgba(245,100,235,0.5) solid;
-    border-radius: 50px;
-    overflow: hidden;
-    
-    position: relative;
-  }
-  
-  .player{
-    width: 50px;
-    height: 100px;
-    background-color:red;
-    display: inline-block;
-    position: absolute;
-    bottom:0;
-    left: 50px;
-  }
-  .box{
-   width: 25px;
-    height: 25px;
-    background-color:black;
-    display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
 
-    position: absolute;
-    bottom: 0;
-    right: 0; 
-    animation: 2s box infinite linear;
-  }
+body{
+  background:#e0e0e0 ;
+}
 
-  .score{
-    width: 200px;
-    height: 60px;
+.container{
+  width: 700px;
+  height: 400px;
+  padding:0 10px;
+  background: #e0e0e0;
+  
+  margin-top:40px;
+  margin-left:40px;
+  overflow: hidden;
+  
+  box-shadow:10px 10px 20px #bebebe,
+    -10px -10px 20px #ffffff;
+  border-radius:8px;
+  
+  position: relative;
+}
 
-    background-color:black;
-    color: white;
-    border-radius: 20px;
-    font-size: 3em;
+.player{
+  width: 50px;
+  height: 100px;
+  background-color:#e0e0e0;
+  box-shadow:10px 10px 20px #bebebe,
+    -10px -10px 20px #ffffff;
+  border-radius:8px;
+  
+  position: absolute;
+  bottom:0;
+}
+.box{
+  width: 25px;
+  height: 25px;
+  background-color:#e0e0e0; 
+  
+  box-shadow:10px 10px 20px #bebebe,
+    -10px -10px 20px #ffffff;
+  border-radius:4px;
+  
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+  animation: 2s box infinite linear;
+}
 
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.score{
+  width: 200px;
+  height: 60px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  
-  .animate{
-    animation:.5s jump;
-  }
-  
-  @keyframes jump{
-    0%{bottom:0;}
-    40%{bottom:60px;}
-    60%{bottom:60px;}
-    100%{bottom:0px;}
-  }
-  
-  @keyframes box{
-    0%{right:0px;}
-    100%{right:720px;}
-  }
+  background-color:rgb(203, 195, 195);
+  color: white;
+  border-radius: 10px;
+  box-shadow: inset 10px 10px 10px #bebebe,
+     inset -10px -10px 20px #ffffff;
+
+  font-size: 3em;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.animate{
+  animation:.5s jump;
+}
+
+@keyframes jump{
+  0%{bottom:0;}
+  40%{bottom:60px;}
+  60%{bottom:60px;}
+  100%{bottom:0px;}
+}
+
+@keyframes box{
+  0%{right:0px;}
+  100%{right:750px;}
+}

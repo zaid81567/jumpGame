@@ -41,7 +41,7 @@ function playerJump(){
 
 
 
-let scoreInterval = setInterval(updateScore,200);
+let scoreInterval = setInterval(updateScore,6);
 
 function updateScore(){
   score++;
@@ -50,7 +50,7 @@ function updateScore(){
 
 
 
-//AUTOJUMP
+// AUTOJUMP
 // let autoJump = setInterval(function(){
 //   console.log("Inside Auto Jump");
 //   let boxRight = parseInt(window.getComputedStyle(box).getPropertyValue("right"));
